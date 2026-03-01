@@ -1,0 +1,18 @@
+n,k=map(int,(input().split()))
+a=list(map(int,input().split()))
+segement,l,current=0,0,0
+left=0
+for r in range(n):
+    current+=a[r]
+    if current>=k:
+        segement+=left+1
+    while current>k:
+        if current-a[l]<k:
+            break
+        else:
+            left+=1
+            current-=a[l]
+            l+=1
+            segement+=1
+    
+print(segement)
