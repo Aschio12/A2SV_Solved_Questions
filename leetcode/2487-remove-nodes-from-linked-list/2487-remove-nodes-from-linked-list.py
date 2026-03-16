@@ -18,6 +18,6 @@ class Solution:
 
         for node in stack:
             ptr.next=node
-            ptr=ptr.next
+            ptr=node
         ptr.next=None
         return dummy.next
