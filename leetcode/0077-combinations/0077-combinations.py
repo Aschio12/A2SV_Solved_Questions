@@ -10,14 +10,15 @@ class Solution:
 
             
 
-            for i in range(start,n+1):
-                comb.append(i)
+            for i in range(start,len(arr)):
+                comb.append(arr[i])
+                
                 rec(i+1,comb)
                 comb.pop()
 
 
                  
-        rec(1,[])
+        rec(0,[])
         return ans
 
 
