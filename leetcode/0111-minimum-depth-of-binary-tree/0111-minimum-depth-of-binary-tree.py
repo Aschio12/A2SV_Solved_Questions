@@ -11,6 +11,8 @@ class Solution:
         def rec(root,depth):
             if not root:
                 return
+            if depth>=self.min:
+                return
 
             if not root.left and not root.right:
                 self.min=min(self.min,depth)
